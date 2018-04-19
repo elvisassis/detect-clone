@@ -1,0 +1,2 @@
+# detect-clone
+Este projeto consiste no desenvolvimento de um plugin para o eclipse com a finalidade de detectar clones de código através da chamada de método. o plugin será desenvolvido para a disciplina de Estudos Avançados em Engenharia de Software do departamento de Ciência da Computada da Universidade Federal De Lavras, e ao final será escrito um artigo mostrando a importância da detecção de códigos clonadas para a Engenharia de Software. 
