@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="detect-clone.commands.category"
+            id="detect-clone.commands.command"
+            name="Command">
+      </command>
+      <category
+            id="detect-clone.commands.category"
+            name="Category">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="main.handlers.Handler"
+            commandId="detect-clone.commands.command">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="detect-clone.commands.command"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+9">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="detect-clone.menu.detect"
+               label="Detect Clone"
+               mnemonic="M">
+            <command
+                  commandId="detect-clone.commands.command"
+                  id="detect-clone.commands."
+                  mnemonic="T"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="detect-clone.toolbars.detect">
+            <command
+                  commandId="detect-clone.commands.command"
+                  icon="icons/clone.png"
+                  style="push"
+                  tooltip="Detect Clone">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>
